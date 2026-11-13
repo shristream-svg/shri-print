@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+site.tar.gz
+*.tar.gz
+
+# Runtime data (excluded from source control)
+runtime/
+agent/config.json
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# TypeScript
+*.tsbuildinfo
+dist/types/
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Test artifacts
+test-results/
+
+# Docker
+docker-compose.override.yml
+# Generated deployment bundle and desktop dependencies
+worker/assets.generated.js
+desktop/node_modules/

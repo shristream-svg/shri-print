@@ -1,0 +1,51 @@
+{
+  "name": "shri-print",
+  "version": "2.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:dev": "node scripts/build.mjs --dev",
+    "start": "node local/server.mjs",
+    "start:dev": "node --watch local/server.mjs",
+    "agent": "node agent/agent.mjs",
+    "agent:dev": "node --watch agent/agent.mjs",
+    "test": "node --test test/*.test.mjs",
+    "test:watch": "node --watch --test test/*.test.mjs",
+    "test:coverage": "node --experimental-test-coverage --test test/*.test.mjs",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio",
+    "lint": "eslint . --ext .js,.mjs,.cjs,.ts",
+    "lint:fix": "eslint . --ext .js,.mjs,.cjs,.ts --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "prepare": "npm run db:generate",
+    "install:all": "npm install && npm run db:generate && npm run build",
+    "clean": "rm -rf dist runtime/agent-cache runtime/agent.lock runtime/agent-health.json runtime/agent-journal.json",
+    "dev": "concurrently \"npm run start:dev\" \"npm run agent:dev\""
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^6.5.438",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "concurrently": "^9.0.0",
+    "drizzle-kit": "^0.31.0",
+    "drizzle-orm": "^0.44.0",
+    "esbuild": "^0.25.0",
+    "eslint": "^9.0.0",
+    "eslint-plugin-prettier": "^5.5.7",
+    "prettier": "^3.3.0",
+    "prettier-plugin-organize-imports": "^4.0.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

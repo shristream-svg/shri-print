@@ -1,0 +1,33 @@
+{
+  "sourceSnapshot": "SHRI Print 2.1.0",
+  "filesBeforeReadme": 81,
+  "secretScan": "PASS",
+  "knownRuntimeCredentialsCompared": 3,
+  "freshTests": {
+    "passed": 77,
+    "failed": 0,
+    "skipped": 0
+  },
+  "freshBuild": "PASS",
+  "notVerified": [
+    "real printing",
+    "live payment",
+    "fresh npm ci",
+    "lint/typecheck",
+    "desktop package"
+  ],
+  "exportOnlyChanges": [
+    "Removed hosting project_id; retained DB/BUCKET bindings",
+    "Moved existing auto-publishing CI workflow to docs/ci-cd.yml.disabled",
+    "Excluded generated bundles, deployment outputs, runtime/customer files and old test-results claims"
+  ],
+  "excluded": [
+    ".git history",
+    "node_modules",
+    "dist",
+    "runtime",
+    "agent/config.json",
+    "worker/assets.generated.js",
+    "TEST-RESULTS.md"
+  ]
+}

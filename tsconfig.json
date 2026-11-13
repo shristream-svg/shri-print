@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "./dist/types",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@lib/*": ["./lib/*"],
+      "@worker/*": ["./worker/*"],
+      "@web/*": ["./web/*"],
+      "@agent/*": ["./agent/*"],
+      "@local/*": ["./local/*"],
+      "@scripts/*": ["./scripts/*"],
+      "@test/*": ["./test/*"]
+    },
+    "types": ["node"]
+  },
+  "include": ["**/*.ts", "**/*.mjs", "**/*.cjs", "**/*.js"],
+  "exclude": ["node_modules", "dist", "runtime", ".openai"]
+}

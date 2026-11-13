@@ -1,0 +1,76 @@
+version: '3.8'
+
+services:
+  # Main application server
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    container_name: shri-print-app
+    ports:
+      - '4888:4888'
+    environment:
+      - NODE_ENV=production
+      - SHRI_PORT=4888
+      - RAZORPAY_KEY_ID=${RAZORPAY_KEY_ID}
+      - RAZORPAY_KEY_SECRET=${RAZORPAY_KEY_SECRET}
+      - RAZORPAY_WEBHOOK_SECRET=${RAZORPAY_WEBHOOK_SECRET}
+    volumes:
+      - shri-print-runtime:/app/runtime
+      - ./agent/config.json:/app/agent/config.json:ro
+    restart: unless-stopped
+    healthcheck:
+      test:
+        [
+          'CMD',
+          'node',
+          '-e',
+          "fetch('http://localhost:4888/api/health').then(r => r.ok ? process.exit(0) : process.exit(1)).catch(() => process.exit(1))",
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # Print agent (runs separately for production)
+  agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    container_name: shri-print-agent
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - shri-print-runtime:/app/runtime
+      - ./agent/config.json:/app/agent/config.json:ro
+    depends_on:
+      - app
+    restart: unless-stopped
+    command: ['node', 'agent/agent.mjs']
+
+  # Development environment
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: builder
+    container_name: shri-print-dev
+    ports:
+      - '4888:4888'
+      - '9229:9229' # Debug port
+    environment:
+      - NODE_ENV=development
+      - SHRI_PORT=4888
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - shri-print-runtime:/app/runtime
+    command: ['npm', 'run', 'dev']
+    stdin_open: true
+    tty: true
+
+volumes:
+  shri-print-runtime:
+    driver: local
