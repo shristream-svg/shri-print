@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Print preview</title>
+    <script type="module" src="/viewer.js"></script>
+    <style>
+      body {
+        margin: 0;
+        background: #e9eeec;
+        color: #17332c;
+        font:
+          13px Segoe UI,
+          Arial;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        background: #1e3530;
+        color: white;
+        padding: 10px;
+        z-index: 1;
+      }
+      button {
+        border: 0;
+        border-radius: 4px;
+        padding: 6px 12px;
+        font: inherit;
+        cursor: pointer;
+      }
+      button:disabled {
+        opacity: 0.4;
+      }
+      main {
+        text-align: center;
+        padding: 15px;
+        overflow: auto;
+      }
+      canvas {
+        max-width: 100%;
+        height: auto;
+        background: white;
+        box-shadow: 0 2px 14px #0002;
+      }
+      #message {
+        padding: 20px;
+        overflow-wrap: anywhere;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <button id="previous" disabled aria-label="Previous page">←</button
+      ><span id="page-label">Loading preview…</span
+      ><button id="next" disabled aria-label="Next page">→</button>
+    </header>
+    <main>
+      <p id="message" role="status">Preparing your PDF preview…</p>
+      <canvas id="page" aria-label="Prepared print page"></canvas>
+    </main>
+  </body>
+</html>

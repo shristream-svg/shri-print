@@ -1,0 +1,574 @@
+/* Print Studio: shared materials, art, motion and operational workspaces. */
+:root {
+  --studio-paper: #fffaf0;
+  --studio-ink: #193f38;
+  --studio-mint: #dcebdc;
+  --studio-coral: #e3663e;
+  --studio-edge: #d8d4bc;
+  --studio-shadow: 0 7px 0 #d9dbc9, 0 18px 30px -22px #324f3c66;
+}
+body.customer-v3-page,
+body.customer-v3-page button,
+body.customer-v3-page input,
+body.customer-v3-page select,
+body.customer-v3-page textarea {
+  font-family: Nunito, 'Segoe UI', sans-serif;
+}
+body.customer-v3-page {
+  background:
+    radial-gradient(ellipse at 90% 5%, #dcebdc, transparent 48%),
+    radial-gradient(ellipse at 0 65%, #fae5cd, transparent 55%), #f5f5ed;
+}
+.studio-kicker {
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.35px;
+  color: #6a7863;
+  line-height: 1.5;
+}
+.service-studio {
+  overflow: visible !important;
+  border-radius: 30px !important;
+  background: #fffaf0 !important;
+  box-shadow: var(--studio-shadow) !important;
+}
+.studio-welcome {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 115px;
+  align-items: center;
+  gap: 8px;
+  padding: 22px 22px 8px;
+}
+.studio-welcome h1 {
+  font:
+    800 clamp(25px, 4vw, 32px)/1.12 Nunito,
+    sans-serif;
+  letter-spacing: -1.3px;
+  margin: 8px 0;
+  color: var(--studio-ink);
+}
+.studio-welcome h1 em {
+  font-style: normal;
+  color: #d15a37;
+}
+.studio-welcome p {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #697367;
+  margin: 0;
+  max-width: 250px;
+}
+.studio-welcome > .studio-art {
+  width: 115px;
+  height: 115px;
+  filter: drop-shadow(0 8px 5px #38543e18);
+  transform: rotate(-6deg);
+}
+.customer-v3-page .service-studio .csp-panel-head {
+  padding-top: 12px;
+  border: 0;
+  background: none;
+}
+.customer-v3-page .service-studio .csp-panel-title {
+  font-size: 17px;
+  letter-spacing: -0.2px;
+}
+.service-studio .csp-panel-subtitle {
+  display: none;
+}
+.customer-v3-page .csp-service-grid {
+  gap: 14px;
+}
+.customer-v3-page .csp-service-btn {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  border: 1px solid #d6dbc3;
+  border-radius: 25px;
+  padding: 16px;
+  min-height: 183px;
+  background: linear-gradient(145deg, #fffef6, #eaf0dd);
+  box-shadow:
+    inset 0 2px 1px #fff,
+    0 6px 0 #ccd5b9,
+    0 12px 19px -13px #30523955;
+  transform-style: preserve-3d;
+  transition:
+    box-shadow 0.2s,
+    background 0.2s;
+  will-change: auto;
+}
+.customer-v3-page .csp-service-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(ellipse at var(--shine-x, 25%) 0, #ffffffb3, transparent 65%);
+  pointer-events: none;
+  z-index: -1;
+}
+.customer-v3-page .csp-service-btn:hover {
+  background: linear-gradient(145deg, #fffef6, #eaf0dd);
+  box-shadow:
+    inset 0 2px 1px #fff,
+    0 8px 0 #c3d1ad,
+    0 20px 26px -17px #30523966;
+  transform: none;
+}
+.customer-v3-page .csp-service-btn:nth-child(2) {
+  background: linear-gradient(145deg, #fff9e9, #f0dfc0);
+  border-color: #e1cfaa;
+  box-shadow:
+    inset 0 2px 1px #fff,
+    0 6px 0 #d9c5a1,
+    0 12px 19px -13px #6c503255;
+}
+.customer-v3-page .csp-service-btn:last-child {
+  background: linear-gradient(145deg, #fffaf1, #efddd2);
+  border-color: #e4cbbd;
+  box-shadow:
+    inset 0 2px 1px #fff,
+    0 6px 0 #d8beb1,
+    0 12px 19px -13px #6c503255;
+  min-height: 125px;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+.customer-v3-page .csp-service-icon {
+  width: 78px;
+  height: 72px;
+  flex: 0 0 78px;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  transform: translateZ(20px);
+}
+.studio-art {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.studio-art svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.customer-v3-page .csp-service-info {
+  transform: translateZ(12px);
+}
+.customer-v3-page .csp-service-name {
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.3px;
+}
+.customer-v3-page .csp-service-desc {
+  font-size: 12px;
+  line-height: 1.45;
+  margin-top: 7px;
+}
+.csp-contact-card {
+  background: #edf1e5;
+  border: 1px solid #d4dcc7;
+  border-radius: 20px;
+  padding: 16px;
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.csp-contact-card > h3,
+.csp-contact-card > p,
+.csp-contact-card > .csp-settings-section:last-child {
+  grid-column: 1/-1;
+}
+.csp-contact-card h3 {
+  font-size: 17px;
+  margin: 0;
+}
+.csp-contact-card > p {
+  margin: 0;
+}
+.csp-contact-card .csp-settings-section {
+  margin: 0;
+}
+.csp-contact-card .csp-label {
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.csp-contact-card textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 70px;
+}
+/* Existing workflows keep stable layout and hit areas; spring motion is transform-only. */
+button:not(.csp-service-btn),
+.button {
+  backface-visibility: hidden;
+}
+button:focus-visible,
+.button:focus-visible,
+.csp-service-btn:focus-visible {
+  outline: 3px solid #357a6b;
+  outline-offset: 5px;
+}
+.desktop-titlebar button {
+  transform: none !important;
+}
+.workspace #uploads-inbox .jobtable {
+  font-size: 14px;
+}
+.workspace #uploads-inbox > .spread {
+  gap: 16px;
+  margin-bottom: 14px;
+}
+#uploads-inbox .empty {
+  padding: 12px;
+}
+.job-search {
+  margin: 20px 0;
+  gap: 12px;
+}
+.job-search input {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px 15px;
+  border: 1px solid #cfcab6;
+  border-radius: 14px;
+  background: #fffcf4;
+  font-size: 16px;
+}
+.job-search select {
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid #cfcab6;
+  background: #fffcf4;
+  font-size: 15px;
+}
+.sidebar nav a {
+  gap: 10px;
+}
+.studio-job {
+  width: min(1280px, calc(100vw - 28px));
+  max-width: 1280px;
+  padding: 24px;
+  border-radius: 28px;
+  background: #fffaf0;
+}
+.job-studio-head {
+  position: sticky;
+  top: -24px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  background: #fffaf0;
+}
+.job-studio-head h2 {
+  margin: 4px 0 0;
+  font-size: 25px;
+}
+.job-studio-head > button {
+  min-width: 80px;
+}
+.job-summary-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 18px;
+}
+.job-summary-strip > span {
+  padding: 7px 12px;
+  background: #e8eddd;
+  border: 1px solid #d1d9bd;
+  border-radius: 99px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.studio-job .job-workspace-grid {
+  grid-template-columns: minmax(0, 1.2fr) minmax(350px, 1fr);
+  align-items: start;
+  margin-top: 0;
+}
+.studio-job .job-pdf-viewer {
+  background: #dce2d4;
+  padding: 16px;
+  max-height: 70dvh;
+}
+.studio-job .job-pdf-viewer canvas {
+  border-radius: 3px;
+  box-shadow: 0 5px 16px #233a2a22;
+}
+.job-tabs {
+  display: flex;
+  gap: 4px;
+  padding: 5px;
+  background: #eae9da;
+  border-radius: 16px;
+  position: sticky;
+  top: 0;
+}
+.job-tabs button {
+  flex: 1;
+  font-size: 13px;
+  min-height: 42px;
+  padding: 8px;
+  box-shadow: none;
+  border: 0;
+  background: transparent;
+}
+.job-tabs button[aria-selected='true'] {
+  background: #fffdf5;
+  box-shadow: 0 3px 0 #cfcdbb;
+  color: #245246;
+}
+.job-tab-panel {
+  padding: 15px 0;
+}
+.source-file {
+  padding: 14px;
+  background: #f2f1e5;
+  border: 1px solid #dadcca;
+  border-radius: 16px;
+  margin-bottom: 10px;
+  overflow-wrap: anywhere;
+}
+.source-file > strong {
+  font-size: 15px;
+}
+.source-file p,
+.source-file small {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 6px 0;
+}
+.source-file .button {
+  display: inline-flex;
+  margin-top: 10px;
+  min-height: 38px;
+  font-size: 13px;
+}
+.job-detail-row {
+  display: grid;
+  grid-template-columns: 105px minmax(0, 1fr);
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e7e3d3;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+}
+.job-detail-row span {
+  color: #6f7669;
+}
+.job-detail-row strong {
+  font-weight: 650;
+}
+.job-edit-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.job-edit-form label {
+  margin: 0;
+  font-size: 13px;
+}
+.job-edit-form input,
+.job-edit-form select,
+.job-edit-form textarea {
+  margin-top: 6px;
+}
+.job-edit-form textarea {
+  min-height: 75px;
+  max-width: 100%;
+  resize: vertical;
+}
+.job-edit-form button,
+.job-edit-form p,
+.job-edit-form label:has(textarea) {
+  grid-column: 1/-1;
+}
+.job-inspector > button {
+  min-height: 44px;
+}
+.job-feedback {
+  font-size: 14px;
+  color: #9a422a;
+  overflow-wrap: anywhere;
+}
+.job-pdf-viewer .job-preview-toolbar {
+  gap: 10px;
+}
+.job-preview-toolbar .button {
+  font-size: 12px;
+  min-height: 36px;
+  padding: 8px;
+}
+@keyframes paper-sway {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(1.5deg);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .studio-welcome .art-paper {
+    transform-origin: 62px 80px;
+    animation: paper-sway 5s ease-in-out infinite;
+  }
+  .csp-service-btn:hover .art-paper {
+    transform-origin: 62px 80px;
+    animation: paper-sway 1.8s ease-in-out infinite;
+  }
+}
+@media (max-width: 800px) {
+  .studio-job .job-workspace-grid {
+    grid-template-columns: 1fr;
+  }
+  .studio-job .job-pdf-viewer {
+    max-height: 48dvh;
+  }
+  .job-studio-head h2 {
+    font-size: 21px;
+  }
+  .studio-job {
+    padding: 16px;
+  }
+  .job-studio-head {
+    top: -16px;
+  }
+  .job-tabs {
+    position: relative;
+  }
+}
+@media (max-width: 360px) {
+  .studio-welcome {
+    padding: 18px 16px 8px;
+    grid-template-columns: minmax(0, 1fr) 88px;
+  }
+  .studio-welcome > .studio-art {
+    width: 88px;
+    height: 100px;
+  }
+  .studio-welcome h1 {
+    font-size: 26px;
+  }
+  .studio-kicker {
+    font-size: 9px;
+  }
+  .customer-v3-page .csp-service-btn {
+    padding: 13px;
+  }
+  .customer-v3-page .csp-service-name {
+    font-size: 16px;
+  }
+  .csp-contact-card {
+    grid-template-columns: 1fr;
+  }
+  .csp-contact-card > * {
+    grid-column: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .studio-art *,
+  button,
+  .button {
+    animation: none !important;
+    transition: none !important;
+  }
+  .csp-service-btn:hover {
+    transform: none !important;
+  }
+}
+.job-edit-form {
+  display: block;
+}
+.job-edit-form fieldset {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.job-field:has(textarea) {
+  grid-column: 1/-1;
+}
+.job-checkbox {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+}
+.job-checkbox input {
+  width: 20px !important;
+  height: 20px;
+  flex: 0 0 20px;
+}
+.job-detail-row > strong {
+  color: #697363;
+  font-size: 13px;
+}
+.job-detail-row > span {
+  color: #28493f;
+  font-size: 14px;
+  min-width: 0;
+}
+.source-file h4 {
+  font-size: 15px;
+  overflow-wrap: anywhere;
+  margin: 0 0 8px;
+}
+.source-file a {
+  display: inline-block;
+  border-radius: 12px;
+  background: #fff9ec;
+  border: 1px solid #cbd0b8;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.job-studio-footer {
+  position: sticky;
+  bottom: -24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  background: #fffaf0;
+  border-top: 1px solid #dfddca;
+  padding: 12px 0;
+  margin-top: 18px;
+  z-index: 2;
+}
+.job-studio-footer .job-feedback {
+  flex: 1 1 100%;
+  margin: 0;
+}
+.job-studio-footer button {
+  min-height: 44px;
+  padding: 10px 16px;
+}
+.notice,
+.job-fixed-options {
+  font-size: 13px;
+  line-height: 1.55;
+  background: #eaf0df;
+  padding: 12px;
+  border-radius: 14px;
+}
+.job-field > span {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
