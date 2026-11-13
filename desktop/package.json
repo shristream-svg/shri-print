@@ -1,0 +1,15 @@
+{
+  "name": "shri-print-admin",
+  "version": "2.0.1",
+  "description": "SHRI Print Admin Desktop Application",
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev"
+  },
+  "author": "SHRI Print",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "44.10.1"
+  }
+}

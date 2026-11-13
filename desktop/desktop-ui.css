@@ -1,0 +1,512 @@
+/* Installed Windows desktop renderer only. Not loaded by the public website. */
+.desktop-studio {
+  --desk-ink: #193e38;
+  --desk-coral: #dd623e;
+  --desk-paper: #fffaf0;
+  --desk-glass: rgba(255, 250, 240, 0.88);
+  color-scheme: light;
+}
+.desktop-studio body {
+  font:
+    16px/1.5 Nunito,
+    'Segoe UI',
+    sans-serif;
+  color: var(--desk-ink);
+  background:
+    radial-gradient(ellipse at 98% 0, #d9ebdf, transparent 52%),
+    radial-gradient(ellipse at 12% 80%, #f9e2cb, transparent 52%), #f3f4eb;
+}
+.desktop-studio .desktop-titlebar {
+  height: 44px;
+  background: #e8eee6e8;
+  border-bottom: 1px solid #fff;
+  backdrop-filter: blur(18px);
+  color: #193e38;
+  padding-left: 24px;
+}
+.desktop-studio .desktop-titlebar strong {
+  font-size: 16px;
+  letter-spacing: 0.2px;
+}
+.desktop-studio .sidebar {
+  width: 248px;
+  top: 44px;
+  padding: 28px 20px;
+  border-radius: 0 30px 30px 0;
+  background: linear-gradient(140deg, #315f57f5, #153d39fa);
+  border-right: 1px solid #ffffff45;
+  box-shadow:
+    inset -1px 0 0 #ffffff2b,
+    10px 0 36px -25px #193e3880;
+  backdrop-filter: blur(18px);
+}
+.desktop-studio .sidebar .logo {
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 34px;
+}
+.desktop-studio .sidebar nav {
+  display: grid;
+  gap: 12px;
+}
+.desktop-studio .sidebar nav a {
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: 700;
+  padding: 15px 17px;
+  min-height: 54px;
+  border-radius: 20px;
+  gap: 14px;
+  color: #d0e1d9;
+  transition:
+    background-color 0.16s,
+    box-shadow 0.16s;
+}
+.desktop-studio .sidebar nav a.active {
+  background: linear-gradient(140deg, #fffdf3, #fae7c8);
+  color: #21483e;
+  box-shadow:
+    inset 0 2px 0 #fff,
+    0 5px 0 #143c32,
+    0 12px 18px -13px #041c16;
+}
+.desktop-studio .sidebar nav a:hover:not(.active) {
+  background: #ffffff15;
+  color: #fffaf0;
+}
+.desktop-studio .navicon {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  display: grid;
+  place-items: center;
+}
+.desktop-studio .navicon svg {
+  width: 24px;
+  height: 24px;
+}
+.desktop-studio .sidefoot {
+  font-size: 14px;
+  line-height: 1.7;
+  padding: 18px;
+}
+.desktop-studio .sidefoot small {
+  font-size: 13px;
+}
+.desktop-studio .workspace {
+  margin-left: 248px;
+  padding: 26px 28px 40px;
+  min-width: 0;
+}
+.desktop-studio .topbar {
+  position: relative;
+  min-height: 124px;
+  padding: 23px 350px 22px 25px;
+  margin-bottom: 24px;
+  border: 1px solid #ffffffc9;
+  border-bottom-color: #d8dfcf;
+  border-radius: 28px;
+  background: var(--desk-glass);
+  box-shadow:
+    inset 0 2px 0 #fff,
+    0 9px 30px -25px #183e3a88;
+  backdrop-filter: blur(20px) saturate(130%);
+}
+.desktop-studio h1 {
+  font-size: 34px !important;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  margin: 5px 0;
+}
+.desktop-studio h2 {
+  font-size: 22px;
+  line-height: 1.3;
+  letter-spacing: -0.4px;
+}
+.desktop-studio h3 {
+  font-size: 19px;
+  line-height: 1.4;
+}
+.desktop-studio .eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  line-height: 1.5;
+  color: #ab4e35;
+}
+.desktop-studio .topbar > .button {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  margin-top: -24px;
+}
+.desktop-studio .card {
+  border: 1px solid #dddac6;
+  border-top-color: #fff;
+  border-radius: 25px;
+  background: #fffaf0;
+  box-shadow:
+    inset 0 1px 0 #fff,
+    0 6px 0 #d7d9c5,
+    0 17px 27px -23px #284d3e99;
+  padding: 23px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.desktop-studio #admin-content:has(> #counter-inbox) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.desktop-studio #admin-content > .stats {
+  grid-column: 1/-1;
+  grid-row: 1;
+  gap: 18px;
+}
+.desktop-studio #admin-content > .agentbar {
+  grid-column: 1/-1;
+  grid-row: 2;
+  min-height: 100px;
+  padding: 18px 23px;
+}
+.desktop-studio #counter-inbox,
+.desktop-studio #uploads-inbox {
+  min-height: 235px;
+}
+.desktop-studio #counter-inbox:has(.joblist),
+.desktop-studio #uploads-inbox:has(.joblist) {
+  grid-column: 1/-1;
+}
+.desktop-studio #admin-content > .dashboard-columns,
+.desktop-studio #admin-content > #visits-inbox,
+.desktop-studio #admin-content > .card:last-child {
+  grid-column: 1/-1;
+}
+.desktop-studio .stats .card {
+  padding: 20px 22px;
+  min-height: 135px;
+}
+.desktop-studio .stat strong {
+  font-size: 34px;
+  line-height: 1.3;
+  letter-spacing: -1px;
+  margin: 10px 0 5px;
+}
+.desktop-studio .stat small {
+  font-size: 13px;
+  line-height: 1.5;
+}
+.desktop-studio .empty {
+  min-height: 120px;
+  padding: 24px 12px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.desktop-studio .empty strong {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+.desktop-studio .muted,
+.desktop-studio .help {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #596e60;
+}
+.desktop-studio small {
+  font-size: 13px;
+  line-height: 1.5;
+}
+.desktop-studio label {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.desktop-studio input,
+.desktop-studio select,
+.desktop-studio textarea {
+  font-size: 16px;
+  line-height: 1.5;
+  border: 1px solid #c9d2bc;
+  border-radius: 15px;
+  background: #fffdf7;
+  color: #1e463c;
+  padding: 12px 14px;
+  min-height: 46px;
+  box-shadow: inset 0 2px 3px #193e3807;
+}
+.desktop-studio input[type='checkbox'],
+.desktop-studio input[type='radio'] {
+  min-height: 0;
+  padding: 0;
+}
+.desktop-studio table {
+  font-size: 14px;
+  line-height: 1.5;
+  background: #fffaf0;
+}
+.desktop-studio th {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+.desktop-studio td {
+  padding: 16px 12px;
+}
+.desktop-studio .joblist,
+.desktop-studio .job-table-wrap {
+  overflow-x: auto;
+}
+.desktop-studio .jobtable {
+  min-width: 720px;
+}
+.desktop-studio .file {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.desktop-studio :is(button, .button, .sidebar nav a, .download-step) {
+  transform: none !important;
+  scale: var(--desk-sx, 1) var(--desk-sy, 1);
+  translate: 0 var(--desk-y, 0);
+  transform-origin: 50% 55%;
+  touch-action: manipulation;
+  transition:
+    background-color 0.16s,
+    box-shadow 0.16s,
+    border-color 0.16s;
+}
+.desktop-studio button,
+.desktop-studio .button {
+  font:
+    700 15px/1.4 Nunito,
+    'Segoe UI',
+    sans-serif;
+  border-radius: 17px;
+  min-height: 46px;
+  padding: 12px 19px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.desktop-studio .button,
+.desktop-studio button:not(.secondary):not(.plain):not(.desktop-window-controls button) {
+  background: linear-gradient(155deg, #fa9468, #dc5b37);
+  border: 1px solid #c15133;
+  color: #fffdf5;
+  box-shadow:
+    inset 0 2px 0 #ffffff94,
+    0 5px 0 #ad432e,
+    0 12px 22px -16px #934b2cbb;
+}
+.desktop-studio button.secondary,
+.desktop-studio .button.secondary {
+  background: linear-gradient(150deg, #fffff8, #edf2e3);
+  border: 1px solid #cbd4bc;
+  box-shadow:
+    inset 0 2px 0 #fff,
+    0 4px 0 #cbd5bc;
+  color: #214a3e;
+}
+.desktop-studio button.plain {
+  box-shadow: none;
+  background: transparent;
+  border-color: transparent;
+  color: inherit;
+}
+.desktop-studio .desktop-window-controls button {
+  min-height: 0;
+  padding: 0;
+  scale: 1;
+  translate: 0;
+  box-shadow: none;
+}
+.desktop-studio .badge {
+  font-size: 12px;
+  line-height: 1.3;
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+.desktop-studio .badge.good {
+  background: #d9efdf;
+  color: #145b43;
+  border-color: #b9dfc8;
+}
+.desktop-studio .download-step {
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid #d5deca;
+  background: #eff3e7;
+  min-height: 72px;
+  margin: 5px 0;
+}
+.desktop-studio .download-step strong {
+  font-size: 16px;
+}
+.desktop-studio .download-step small {
+  font-size: 13px;
+}
+.desktop-studio .job-tabs {
+  background: #fffaf0ed;
+  border: 1px solid #d6dec9;
+  border-radius: 20px;
+  padding: 8px;
+  gap: 10px;
+  backdrop-filter: blur(15px);
+}
+.desktop-studio .job-tabs button {
+  font-size: 15px;
+}
+.desktop-studio .job-tabs button[aria-selected='true'] {
+  background: #254d43;
+  color: #fffaf0;
+  box-shadow: 0 4px 0 #14392f;
+}
+.desktop-studio dialog {
+  border-radius: 28px;
+  color: #193e38;
+}
+.desktop-studio .job-pdf-viewer {
+  background: #e9eddf;
+}
+.desktop-studio :is(button, a, input, select, textarea):focus-visible {
+  outline: 3px solid #23836d;
+  outline-offset: 4px;
+}
+.desktop-studio .desk-printer {
+  position: absolute;
+  right: 225px;
+  top: 14px;
+  width: 100px;
+  height: 94px;
+  perspective: 500px;
+  transform-style: preserve-3d;
+  transform: rotateX(12deg) rotateY(-18deg) rotateZ(4deg);
+  pointer-events: none;
+}
+.desktop-studio .desk-paper {
+  position: absolute;
+  width: 52px;
+  height: 57px;
+  left: 25px;
+  top: 0;
+  border-radius: 7px;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 12px, #bad0bd 12px 15px, transparent 15px 23px),
+    #fffef6;
+  border: 5px solid #fffef6;
+  box-shadow: 0 4px 0 #d4dcc6;
+  transform: translateZ(-7px);
+}
+.desktop-studio .desk-case {
+  position: absolute;
+  left: 7px;
+  top: 33px;
+  width: 87px;
+  height: 44px;
+  border: 1px solid #e1d7ad;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #fff9df, #d8ddb9);
+  box-shadow:
+    inset 0 2px 0 #fff,
+    0 10px 0 #639785,
+    0 18px 12px -10px #193e3866;
+  transform: translateZ(8px);
+}
+.desktop-studio .desk-case i {
+  position: absolute;
+  right: 12px;
+  top: 14px;
+  width: 7px;
+  height: 7px;
+  background: #e76d46;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #f9c6a53b;
+}
+.desktop-studio .desk-slot {
+  position: absolute;
+  left: 22px;
+  top: 68px;
+  width: 58px;
+  height: 7px;
+  border-radius: 8px;
+  background: #315f51;
+  transform: translateZ(14px);
+}
+.desktop-studio .desk-output {
+  position: absolute;
+  left: 28px;
+  top: 70px;
+  width: 45px;
+  height: 23px;
+  background: repeating-linear-gradient(0deg, transparent 0 7px, #b8cbb5 7px 9px), #fffef2;
+  border: 4px solid #fffef2;
+  border-radius: 4px;
+  transform: translateZ(20px);
+  box-shadow: 0 4px 6px #1b423322;
+}
+@media (max-width: 1200px) {
+  .desktop-studio .desk-printer {
+    display: none;
+  }
+  .desktop-studio .topbar {
+    padding-right: 220px;
+  }
+  .desktop-studio .sidebar {
+    width: 225px;
+    padding: 24px 14px;
+  }
+  .desktop-studio .workspace {
+    margin-left: 225px;
+    padding: 24px;
+  }
+  .desktop-studio .sidebar nav a {
+    font-size: 16px;
+    padding: 14px;
+  }
+  .desktop-studio #admin-content:has(> #counter-inbox) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .desktop-studio .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@supports not (backdrop-filter: blur(1px)) {
+  .desktop-studio .topbar,
+  .desktop-studio .job-tabs {
+    background: #fffaf0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .desktop-studio :is(button, .button, .sidebar nav a, .download-step) {
+    scale: 1 !important;
+    translate: 0 !important;
+    transition: none !important;
+  }
+  .desktop-studio .desk-printer {
+    transform: none;
+  }
+}
+@media (forced-colors: active) {
+  .desktop-studio .sidebar,
+  .desktop-studio .topbar,
+  .desktop-studio .card,
+  .desktop-studio .job-tabs {
+    background: Canvas;
+    color: CanvasText;
+    box-shadow: none;
+    backdrop-filter: none;
+    border: 1px solid CanvasText;
+  }
+  .desktop-studio .desk-printer {
+    display: none;
+  }
+  .desktop-studio button,
+  .desktop-studio .button {
+    background: ButtonFace;
+    color: ButtonText;
+    box-shadow: none;
+    border: 1px solid ButtonText;
+  }
+}
+.desktop-studio.desktop-shell body {
+  padding-top: 44px;
+}
